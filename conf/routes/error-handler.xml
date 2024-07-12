@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routeConfiguration id="baseErrorHandler">
+    <onException>
+        <exception>java.lang.Exception</exception>
+        <handled>
+            <constant>true</constant>
+        </handled>
+        <script>
+            <groovy>
+                def errorDesc = exchange.getProperty(org.apache.camel.Exchange.EXCEPTION_CAUGHT,
+                java.lang.Exception.class).getMessage()
+                def response = new com.skozurak.integration.service.main.common.model.BaseResponse("ERROR", errorDesc)
+                exchange.getIn().setBody(response)
+                exchange.getIn().setHeader(org.apache.camel.Exchange.HTTP_RESPONSE_CODE, 500
+            </groovy>
+        </script>
+    </onException>
+</routeConfiguration>

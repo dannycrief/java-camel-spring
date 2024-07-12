@@ -20,7 +20,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <java.version>17</java.version>
         <spring-boot.version>2.7.0</spring-boot.version>
-        <camel.version>3.14.3</camel.version>
+        <camel.version>3.21.4</camel.version>
         <cxf.version>3.4.5</cxf.version>
         <cxf-xjc.version>3.3.2</cxf-xjc.version>
         <groove-all.version>3.0.11</groove-all.version>
